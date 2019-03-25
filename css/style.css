@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: snow;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.first-box {
+    /* border: 2px solid black; */
+    /* margin-top: -1cm;  */
+    width: 100%;
+    /* height: 60px; */
+    /* position: fixed; */
+}
+
+.second-box {
+    /* margin-top: -0.2cm; */
+    width: 100%;
+    /* height: 400px; */
+    /* border: 2px solid red; */
+    display: grid;
+    /* grid-template-columns: 30% 70%; */
+
+    /* margin-top: 1cm; */
+}
+/* 
+.second-box > div:nth-child(odd){
+    background-color: grey;
+    padding: 1em;
+} */
+
+.wrapper{
+    /* margin-top: -0cm;     */
+    height: 600px;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 40% 60%;
+}
+.wrapper > .grid{
+    padding: 1em;
+    /* border: 1px solid black; */
+}
+
+.form-container{
+    text-align: center;
+}
+#home-img{
+    width: 90%;
+    height: 200px;
+}
+#btns-div{
+    margin-top: 0.5cm; 
+    /* border: 2px solid black;    */
+}
+#donate-btn{
+    display: inline-block;
+}
+#accept-btn{
+    display: inline-block; 
+    float: right;   
+}
+#donor-h{
+    font-size: 50px;
+    font-weight: bolder;
+}
+@media screen and (max-width:834px){
+    .wrapper{
+        display:grid;
+        grid-template-rows: 100% 100%;
+        display: inline;
+        width: auto;
+        height: 300px;
+    }
+}
+
+#user-card-box {
+    /* border:1px solid black; */
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+}
+
+#user-card {
+    /* border:1px solid black; */
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 0px 2px 2px gray;
+}
+
+#auths {
+    /* border: 2px solid rgb(235, 54, 160); */
+    text-align: center;
+    color:#333;
+    padding-top: 40px;
+}
+
+#auths h2 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#auths > img{
+    width: 120px;
+    height: 120px;
+}
+
+nav {
+    background:linear-gradient(45deg, rgb(66, 154, 241),rgb(235, 54, 160));
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 62px ;
+    /* padding: 8px; */
+}
+
+.logo {
+    float: left;
+    padding: 8px;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.logo a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: left;
+}
+
+nav ul li:not(:first-child){
+    margin-left: 48px;
+}
+
+nav ul li:last-child {
+    margin-right: 24px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 600px;
+}
+
+/* Second container of home...... */
+
+
+/* Ends here ........................... */
+
+
+@media screen and (max-width: 864px) {
+    .logo {
+        padding: 0;
+    }
+
+
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* background:linear-gradient(60deg, rgb(10, 79, 148),snow); */
+        /* background:linear-gradient(60deg, rgb(24, 112, 199),snow); */
+        /* background:linear-gradient(60deg, rgb(76, 152, 228),snow); */
+        background:linear-gradient(45deg, rgb(66, 154, 241),rgb(235, 54, 160));
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+
+    .nav-wrapper ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%
+    }
+
+    .nav-wrapper ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;    
+    }
+
+    .nav-wrapper ul li:nth-child(1) a {
+        transition-delay: 0.2s;
+    }
+    
+    .nav-wrapper ul li:nth-child(2) a {
+        transition-delay: 0.3s;
+    }
+    
+    .nav-wrapper ul li:nth-child(3) a {
+        transition-delay: 0.4s;
+    }
+    
+    .nav-wrapper ul li:nth-child(4) a {
+        transition-delay: 0.5s;
+    }
+    
+    .nav-wrapper ul li:nth-child(5) a {
+        transition-delay: 0.6s;
+    }
+
+    .nav-wrapper ul li:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .nav-wrapper ul li a {
+        padding: 10px 24px;
+        opacity: 0;
+        /* color: rgba(77, 2, 77, 0.774); */
+        color: snow;
+        text-shadow: 1px 2px 5px grey;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        transform: translateY(-20px);
+        transition: all 0.2s ease;
+    }
+
+    .nav-btn {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+
+    }
+
+    .nav-btn i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #000;
+        border-radius: 2px;
+        margin-left: 14px;
+    }
+
+    .nav-btn i:nth-child(1) {
+        margin-top: 16px;
+    }
+
+    .nav-btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1; 
+    }
+
+    .nav-btn i:nth-child(3) {
+        margin-top: 4px;
+    }
+
+}
+
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: black;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Donyt</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="icon" href="../Images/icon.gif">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="main-nav" class="first-box">
+        <nav>
+            <input type="checkbox" id="nav" class="hidden">
+            <label for="nav" class="nav-btn">
+                <i></i>
+                <i></i>
+                <i></i>
+            </label>
+            <div class="logo">
+                <a href="../index.html"><img width="25px" height="25px" src="../Images/icon.gif" alt="Donyt"></a>
+                <a href="../pages/home.html">Donyt</a>
+            </div>
+            <div class="nav-wrapper">
+                <ul>
+                    <li><a href="../pages/home.html" id="index">Home</a></li>
+                    <li id="log-li"><a href="../pages/login.html" id="login" onClick="logIn()">Login</a></li>
+                    <li id="lo-li"><a href="javascript:void(0)" id="logout" onClick="logOut()">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="second-box ">
+        
+        <div id="home" class="wrapper" class="col-md-8 col-md-offset-2">
+            <div id="user-card-box">
+                <div id="user-card" class="grid">
+                    <div id="auths">
+                        <img src="../Images/icon4.png" alt="User">
+                    </div>
+                </div>
+            </div>
+            <div id="home-card" class="grid">
+                <div id="img-div">
+                    <center>
+                        <img src="../Images/dn2.jpg" id="home-img">
+                    </center>
+                </div>
+                <div id="btns-div">
+                    <div id="donate-btn"><button class="btn btn-primary" onClick="donateBlood()">Donate Blood</button></div>
+                    <div id="accept-btn"><button class="btn btn-primary" onClick="acceptBlood()">Accept Blood</button></div>
+                </div>
+                <div class="form-popup" id="myForm">
+                    <div class="form-container">
+                        <h1 id="donor-h">Donor Info</h1>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="nameD" type="text" class="form-control" name="name" placeholder="Full name">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="emailD" type="text" class="form-control" name="email" placeholder="Email address">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="cnicD" type="text" class="form-control" name="CNIC" placeholder="CNIC No.">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input id="phoneD" type="text" class="form-control" name="phone" placeholder="Phone Num (+92)">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="genderD" type="text" class="form-control" name="gender" placeholder="Gender">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="ageD" type="text" class="form-control" name="age" placeholder="Age">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span>
+                        <input id="blood-groupD" type="text" class="form-control" name="blood-group" placeholder="Blood Group">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-scale"></i></span>
+                        <input id="weightD" type="text" class="form-control" name="weight" placeholder="Weight (KG)">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input id="addressD" type="text" class="form-control" name="address" placeholder="Address">
+                    </div>
+                    <br>
+                    <div>
+                        <button class="btn btn-primary" onclick="closeBtn()">Close</button>
+                        <button type="submit" class="btn btn-success" onClick="submitInfo()">Submit Info</button>
+                    </div>
+                </div>
+                <div class="form-popup" id="myFormA">
+                    <div class="form-container">
+                        <h1 id="donor-h">Acceptor Info</h1>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="nameA" type="text" class="form-control" name="name" placeholder="Full name">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="emailA" type="text" class="form-control" name="email" placeholder="Email address">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="cnicA" type="text" class="form-control" name="CNIC" placeholder="CNIC No.">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input id="phoneA" type="text" class="form-control" name="phone" placeholder="Phone Num (+92)">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="genderA" type="text" class="form-control" name="gender" placeholder="Gender">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="ageA" type="text" class="form-control" name="age" placeholder="Age">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span>
+                        <input id="blood-groupA" type="text" class="form-control" name="blood-group" placeholder="Blood Group">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-scale"></i></span>
+                        <input id="weightA" type="text" class="form-control" name="weight" placeholder="Weight (KG)">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input id="addressA" type="text" class="form-control" name="address" placeholder="Address">
+                    </div>
+                    <br>
+                    <div>
+                        <button class="btn btn-primary" onclick="closeBtnA()">Close</button>
+                        <button type="submit" class="btn btn-success" onClick="submitInfoA()">Submit Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="../js/logout.js"></script>
+</body>
+
+</html>
